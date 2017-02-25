@@ -2,7 +2,7 @@ require 'redmine'
 
 require 'telegram_mailer_patch'
 
-Redmine::Plugin.register :redmine_telegram do
+Redmine::Plugin.register :redmine_telegram_email do
 	name 'Redmine Telegram'
 	author 'Andry Kondratiev'
 	url 'https://github.com/massdest/redmine_telegram'
