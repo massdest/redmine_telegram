@@ -100,7 +100,7 @@ module TelegramMailerPatch
         next if user.id.to_i == issue.author_id.to_i
         telegram_chat_id = 0
         telegram_disable_email = 0
-        user.visible_custom_field_values.each do |telegram_field|
+        user.custom_field_values.each do |telegram_field|
           if telegram_field.custom_field.name.to_s == 'Telegram Channel' and telegram_field.value.to_i != 0
             telegram_chat_id = telegram_field.value.to_i
           end
@@ -142,7 +142,7 @@ module TelegramMailerPatch
         next if user.id.to_i == journal.user.id.to_i
         telegram_chat_id = 0
         telegram_disable_email = 0
-        user.visible_custom_field_values.each do |telegram_field|
+        user.custom_field_values.each do |telegram_field|
           if telegram_field.custom_field.name.to_s == 'Telegram Channel' and telegram_field.value.to_i != 0
             telegram_chat_id = telegram_field.value.to_i
           end
