@@ -3,12 +3,12 @@ require 'redmine'
 require 'telegram_mailer_patch'
 
 Redmine::Plugin.register :redmine_telegram_email do
-	name 'Redmine Telegram'
+	name 'Redmine Telegram Email'
 	author 'Andry Kondratiev'
-	url 'https://github.com/massdest/redmine_telegram'
-	author_url 'https://github.com/massdest/redmine_telegram'
-	description 'Telegram chat integration'
-	version '0.6'
+	url 'https://github.com/massdest/redmine_telegram_email'
+	author_url 'https://github.com/massdest'
+	description 'Telegram messenger plugin, like email, but to Telegram'
+	version '0.1'
 
 	requires_redmine :version_or_higher => '0.8.0'
 
