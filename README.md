@@ -1,13 +1,13 @@
-# Telegram private messages plugin for Redmine
+# Telegram messages plugin for Redmine
 
-This plugin posts issues updates to a Telegram. 
+This plugin send messages as email, only to the Telegram. So you can disable email and use Telegram only, or use both.  
 
 ## Installation
 
-From your Redmine plugins directory, clone this repository as `redmine_telegram` (note
+From your Redmine plugins directory, clone this repository as `redmine_telegram_email` (note
 the underscore!):
 
-    git clone https://github.com/massdest/redmine_telegram redmine_telegram
+    git clone https://github.com/massdest/redmine_telegram_email redmine_telegram_email
 
 You will also need the `httpclient` dependency, which can be installed by running
 
@@ -17,15 +17,23 @@ from the plugin directory.
 
 Start migration command
 
-	rake redmine:plugins:migrate RAILS_ENV=production
+	bundle exec rake redmine:plugins:migrate RAILS_ENV=production
 
 Restart Redmine, and you should see the plugin show up in the Plugins page.
 
 ## Using
 
-Create User custom field named "Telegram Channel" for ex: http://redmine.com/custom_fields/new?type=UserCustomField (without quotes).
+### Creating custom fields
 
-The channel can be entered per user settings http://redmine.com/my/account for every user who wants to get notifications, in "Telegram Channel" field, for ex: 11111111 (not phone number, but chat id)
+Create two user custom fields: `http://example.com/custom_fields/new?utf8=✓&type=UserCustomField` named **Telegram Channel** (text) and **Telegram disable email** (boolean, default no, checkboxes).
+
+![Custom field](images/redmine_telegram_email_customfield2.png)
+
+![Custom field](images/redmine_telegram_email_customfield1.png)
+
+The channel can be entered per user settings http://example.com/my/account for every user who wants to get notifications, in **Telegram Channel** field, for ex: 11111111 (not phone number, but chat id). And you can control Telegram messages by **Email notifications** dropdown.  
+
+![Custom field](images/redmine_telegram_email_myaccount.png)
 
 To get Telegram Channel id you must create bot with [BotFather](https://core.telegram.org/bots#6-botfather), then get bot token and run bot.py from this folder, send any symbols to bot and it return your Telegram Channel id.
 
@@ -37,7 +45,7 @@ Go to plugin girectory and pull last version
 
 Then start migration database to new version
 
-	rake redmine:plugins:migrate RAILS_ENV=production
+	bundle exec rake redmine:plugins:migrate RAILS_ENV=production
 
 Last step - restart your web-server to apply changes.
 
@@ -47,10 +55,8 @@ Now you can use last version.
 
 From Redmine plugin directory run command
 
-	rake redmine:plugins:migrate NAME=redmine_telegram VERSION=0 RAILS_ENV=production
+	bundle exec rake redmine:plugins:migrate NAME=redmine_telegram_email VERSION=0 RAILS_ENV=production
 
 After that restart Redmine.
-
-
 
 For more information, see http://www.redmine.org/projects/redmine/wiki/Plugins.
