@@ -37,7 +37,7 @@ And you can control Telegram messages by **Email notifications** dropdown.
 
 ![Custom field](images/redmine_telegram_email_myaccount.png)
 
-To get Telegram Channel id you must create bot with [BotFather](https://core.telegram.org/bots#6-botfather), then get bot token and run bot.py from this folder, send any symbols to bot and it return your Telegram Channel id.
+To get Telegram Channel id you must create bot with [BotFather](https://core.telegram.org/bots#6-botfather), then get bot token and run [bot.py](/bot.py) from this folder, send any symbols to bot and it return your Telegram Channel id.
 
 ## Update plugin
 
