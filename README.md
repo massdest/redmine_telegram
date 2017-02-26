@@ -31,7 +31,9 @@ Create two user custom fields: `http://example.com/custom_fields/new?utf8=✓&ty
 
 ![Custom field](images/redmine_telegram_email_customfield1.png)
 
-The channel can be entered per user settings http://example.com/my/account for every user who wants to get notifications, in **Telegram Channel** field, for ex: 11111111 (not phone number, but chat id). And you can control Telegram messages by **Email notifications** dropdown.  
+The channel can be entered per user settings http://example.com/my/account for every user who wants to get notifications, in **Telegram Channel** field, for ex: 11111111 (not phone number, but chat id). 
+
+And you can control Telegram messages by **Email notifications** dropdown.  
 
 ![Custom field](images/redmine_telegram_email_myaccount.png)
 
